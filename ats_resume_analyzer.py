@@ -176,7 +176,7 @@ if __name__ == "__main__":
 
     report = analyze_resume(RESUME_TEXT, JOB_DESCRIPTION)
 
-    output_path = "resume_analysis_report.md"
+    output_path = os.getenv("OUTPUT_FILE", "resume_analysis_report.md")
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(report)
 
