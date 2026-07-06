@@ -17,13 +17,13 @@ A Python-based ATS (Applicant Tracking System) Resume Analyzer that evaluates a 
 - Final resume verdict
 - Markdown report generation
 
-## Tech Stack
+ ## Tech Stack
 
 - Python 3.10+
 - Anthropic Claude API
 - Markdown
 
-## Project Structure
+ ## Project Structure
 
 ```
 ATS_Resume-Analyser/
