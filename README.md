@@ -20,7 +20,7 @@ A Python-based ATS (Applicant Tracking System) Resume Analyzer that evaluates a 
  ## Tech Stack
 
 - Python 3.10+
-- Anthropic Claude API
+- Anthropic Claude API 
 - Markdown
 
  ## Project Structure
