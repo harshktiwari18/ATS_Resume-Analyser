@@ -1,4 +1,4 @@
-# ATS Resume Analyzer
+#ATS Resume Analyzer
 
 A Python-based ATS (Applicant Tracking System) Resume Analyzer that evaluates a candidate's resume against a job description using the Anthropic Claude API and generates a detailed Markdown report.
 
