@@ -58,7 +58,7 @@ Set your Anthropic API Key.
 $env:ANTHROPIC_API_KEY="your-api-key"
 ```
 
-### Linux / macOS
+## Linux / macOS
 
 ```bash
 export ANTHROPIC_API_KEY="your-api-key"
