@@ -1,0 +1,36 @@
+Software Engineer
+
+Responsibilities
+
+• Design, develop, test, and maintain software applications.
+• Write clean, efficient, and maintainable code.
+• Debug software defects and improve application performance.
+• Collaborate with cross-functional teams.
+• Participate in code reviews and software testing.
+• Learn new technologies and contribute to engineering projects.
+
+Required Skills
+
+• Java, Python, or C++
+• Data Structures and Algorithms
+• Object-Oriented Programming
+• Database Management Systems (DBMS)
+• SQL
+• Operating Systems
+• Computer Networks
+• Git
+• REST APIs
+• HTML, CSS, JavaScript
+
+Preferred Skills
+
+• React.js
+• Node.js
+• Express.js
+• MongoDB
+• AWS
+• Agile Methodology
+
+Education
+
+Bachelor's degree in Computer Science, Information Technology, or related field.

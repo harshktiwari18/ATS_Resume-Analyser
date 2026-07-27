@@ -1,0 +1,62 @@
+EMILY CARTER
+Software Engineering Student
+
+Email: emily.carter@example.com
+Phone: +1 555-123-4567
+Location: Boston, MA, USA
+
+Professional Summary
+
+Passionate Computer Science student with a strong foundation in Java, Python, Data Structures & Algorithms, and Full Stack Web Development. Experienced in developing scalable web applications using the MERN stack and RESTful APIs. Strong problem-solving skills with hands-on experience in building real-world projects and collaborating in team environments.
+
+Education
+
+Bachelor of Science in Computer Science
+ABC University
+2023 – 2027
+
+Technical Skills
+
+Programming Languages:
+Java, Python, JavaScript, SQL
+
+Frontend:
+HTML5, CSS3, React.js
+
+Backend:
+Node.js, Express.js, REST APIs
+
+Database:
+MongoDB, MySQL
+
+Tools:
+Git, GitHub, Postman, VS Code
+
+Core Subjects:
+Data Structures & Algorithms
+Object-Oriented Programming
+Database Management Systems
+Operating Systems
+Computer Networks
+
+Projects
+
+Task Management System
+• Developed a full-stack task management application using React, Node.js, Express.js, and MongoDB.
+• Implemented JWT authentication, CRUD operations, and role-based authorization.
+• Deployed the frontend on Vercel and backend on Render.
+
+Expense Tracker
+• Built a responsive expense tracking application with React and Chart.js.
+• Added expense categorization, monthly reports, and data visualization.
+• Integrated REST APIs and MongoDB for persistent storage.
+
+Certifications
+
+• Java Programming Fundamentals
+• SQL for Data Analysis
+
+Achievements
+
+• Solved 400+ coding problems on LeetCode.
+• Top 10 finalist in University Hackathon.
