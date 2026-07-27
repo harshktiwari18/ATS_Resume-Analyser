@@ -15,7 +15,7 @@ Usage:
 """
 
 import os
-from anthropic import Anthropic
+from google import genai
 
 # ---------------------------------------------------------------------------
 # 1. CONFIGURE YOUR INPUTS HERE
@@ -26,9 +26,14 @@ RESUME_TEXT = """
 PASTE THE FULL RESUME TEXT HERE
 """
 
+
+
+
 JOB_DESCRIPTION = """
-PASTE THE FULL JOB DESCRIPTION HERE
+PASTE THE FULL JOB DESCRIPTION TEXT HERE
 """
+
+
 
 # Option B: load from local .txt files instead (uncomment to use)
 # with open("resume.txt", "r", encoding="utf-8") as f:
@@ -138,29 +143,36 @@ Job Description:
 Please perform the full analysis as instructed."""
 
 
-# ---------------------------------------------------------------------------
+
 # 4. CALL THE API
-# ---------------------------------------------------------------------------
 
 def analyze_resume(resume_text: str, job_description: str) -> str:
-    client = Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
+    api_key = os.environ.get("GEMINI_API_KEY")
 
-    message = client.messages.create(
-        model="claude-sonnet-4-6",   # use the latest available Sonnet model
-        max_tokens=8000,
-        system=SYSTEM_PROMPT,
-        messages=[
-            {
-                "role": "user",
-                "content": build_user_message(resume_text, job_description),
-            }
-        ],
+    if not api_key:
+        raise RuntimeError(
+            "GEMINI_API_KEY environment variable not found."
+        )
+
+    client = genai.Client(api_key=api_key)
+
+    prompt = f"""
+System Instructions:
+{SYSTEM_PROMPT}
+
+Resume:
+{resume_text}
+
+Job Description:
+{job_description}
+"""
+
+    response = client.models.generate_content(
+        model="gemini-3.5-flash",
+        contents=prompt,
     )
 
-    # Concatenate all text blocks from the response
-    return "".join(
-        block.text for block in message.content if block.type == "text"
-    )
+    return response.text
 
 
 # ---------------------------------------------------------------------------
