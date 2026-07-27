@@ -192,15 +192,19 @@ Job Description:
 def main():
     if "PASTE THE FULL" in RESUME_TEXT or "PASTE THE FULL" in JOB_DESCRIPTION:
         raise SystemExit(
-            "Please fill in RESUME_TEXT and JOB_DESCRIPTION (or load them from files) "
-            "before running this script."
+            "Please fill in RESUME_TEXT and JOB_DESCRIPTION before running."
         )
 
     report = analyze_resume(RESUME_TEXT, JOB_DESCRIPTION)
 
     output_path = os.getenv("OUTPUT_FILE", "resume_analysis_report.md")
+
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(report)
 
     print(f"Analysis complete. Report saved to: {output_path}\n")
     print(report)
+
+
+if __name__ == "__main__":
+    main()
