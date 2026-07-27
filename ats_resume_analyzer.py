@@ -1,17 +1,27 @@
 """
 ATS Resume Analyzer
 --------------------
-Analyzes a candidate's resume against a job description using Claude,
-and produces a full structured Markdown evaluation report.
+Analyzes a candidate's resume against a target job description using the
+Google Gemini API and generates a detailed ATS evaluation report.
+
+Features:
+- Resume Summary
+- Skills Extraction
+- ATS Match Score
+- Missing Keywords
+- Resume Improvement Suggestions
+- Project Evaluation
+- Interview Questions
+- Learning Roadmap
 
 Requirements:
-    pip install anthropic
+    pip install google-genai
 
 Usage:
-    1. Set your API key as an environment variable:
-       export ANTHROPIC_API_KEY="your-api-key-here"
-    2. Fill in RESUME_TEXT and JOB_DESCRIPTION below (or load from files).
-    3. Run: python ats_resume_analyzer.py
+    1. Set the GEMINI_API_KEY environment variable.
+    2. Add your resume and job description.
+    3. Run:
+       python ats_resume_analyzer.py
 """
 
 import os
