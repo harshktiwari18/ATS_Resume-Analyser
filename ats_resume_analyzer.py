@@ -189,7 +189,7 @@ Job Description:
 # 5. RUN AND SAVE OUTPUT
 # ---------------------------------------------------------------------------
 
-if __name__ == "__main__":
+def main():
     if "PASTE THE FULL" in RESUME_TEXT or "PASTE THE FULL" in JOB_DESCRIPTION:
         raise SystemExit(
             "Please fill in RESUME_TEXT and JOB_DESCRIPTION (or load them from files) "
