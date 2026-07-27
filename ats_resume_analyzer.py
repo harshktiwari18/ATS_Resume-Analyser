@@ -166,16 +166,14 @@ def analyze_resume(resume_text: str, job_description: str) -> str:
 
     client = genai.Client(api_key=api_key)
 
-    prompt = f"""
-System Instructions:
-{SYSTEM_PROMPT}
+    prompt = f"""{SYSTEM_PROMPT}
 
-Resume:
-{resume_text}
+    Resume:
+    {resume_text}
 
-Job Description:
-{job_description}
-"""
+    Job Description:
+    {job_description}
+    """
 
     response = client.models.generate_content(
         model="gemini-3.5-flash",
