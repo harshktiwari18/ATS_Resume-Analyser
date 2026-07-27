@@ -157,7 +157,7 @@ Please perform the full analysis as instructed."""
 # 4. CALL THE API
 
 def analyze_resume(resume_text: str, job_description: str) -> str:
-    api_key = os.environ.get("GEMINI_API_KEY")
+    api_key = os.getenv("GEMINI_API_KEY")
 
     if not api_key:
         raise RuntimeError(
