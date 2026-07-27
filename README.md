@@ -1,84 +1,91 @@
 # ATS Resume Analyzer
 
-A Python-based ATS (Applicant Tracking System) Resume Analyzer that evaluates a candidate's resume against a job description using the Anthropic Claude API and generates a detailed Markdown report.
+An AI-powered ATS (Applicant Tracking System) Resume Analyzer built with **Python** and **Google Gemini API**. It compares a resume against a job description and generates a detailed Markdown report with an ATS score, missing keywords, strengths, weaknesses, improvement suggestions, interview questions, and a personalized learning roadmap.
+
+---
 
 ## Features
 
-- Resume summary generation
-- Technical & soft skills extraction
-- ATS match score estimation
-- Missing keywords detection
-- Strengths & weaknesses analysis
-- Resume improvement suggestions
-- Project evaluation
-- Resume rewrite suggestions
-- Technical & HR interview questions
-- Learning roadmap generation
-- Final resume verdict
-- Markdown report generation
+- ATS Compatibility Score
+- Resume Summary
+- Technical & Soft Skills Extraction
+- Missing Keywords Detection
+- Strengths & Weaknesses Analysis
+- Resume Improvement Suggestions
+- Project Evaluation
+- Resume Rewrite Suggestions
+- Technical & HR Interview Questions
+- Personalized Learning Roadmap
+- Markdown Report Generation
 
- ## Tech Stack
+---
+
+## Tech Stack
 
 - Python 3.10+
-- Anthropic Claude API 
+- Google Gemini API (`google-genai`)
 - Markdown
 
- ## Project Structure
+---
+
+## Project Structure
 
 ```
 ATS_Resume-Analyser/
-│
-├── ats_resume_analyzer.py
-├── resume.txt.pages
-└── README.md
+│── ats_resume_analyzer.py
+│── resume_analysis_report.md
+│── README.md
 ```
+
+---
 
 ## Installation
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/harshktiwari18/ATS_Resume-Analyser.git
+git clone https://github.com/YOUR_USERNAME/ATS_Resume-Analyser.git
 cd ATS_Resume-Analyser
 ```
 
 Install dependencies:
 
 ```bash
-pip install anthropic
+pip install google-genai
 ```
 
-## Configuration
+---
 
-Set your Anthropic API Key.
+## Setup
+
+Generate a Gemini API key from Google AI Studio.
 
 ### Windows (PowerShell)
 
 ```powershell
-$env:ANTHROPIC_API_KEY="your-api-key"
+$env:GEMINI_API_KEY="YOUR_API_KEY"
 ```
 
-## Linux / macOS
+### Windows (CMD)
+
+```cmd
+set GEMINI_API_KEY=YOUR_API_KEY
+```
+
+### Linux / macOS
 
 ```bash
-export ANTHROPIC_API_KEY="your-api-key"
+export GEMINI_API_KEY="YOUR_API_KEY"
 ```
+
+---
 
 ## Usage
 
-Paste your resume and job description into:
-
-```python
-RESUME_TEXT = """
-...
-"""
-
-JOB_DESCRIPTION = """
-...
-"""
-```
-
-Run the script:
+1. Open `ats_resume_analyzer.py`
+2. Replace `RESUME_TEXT` with your resume.
+3. Replace `JOB_DESCRIPTION` with the target job description.
+4. Run:
 
 ```bash
 python ats_resume_analyzer.py
@@ -90,14 +97,16 @@ The generated report will be saved as:
 resume_analysis_report.md
 ```
 
-## Output
+---
 
-The generated report includes:
+## Sample Output
+
+The report includes:
 
 - Resume Summary
 - Technical Skills
 - Soft Skills
-- ATS Score
+- ATS Match Score
 - Missing Keywords
 - Strengths
 - Weaknesses
@@ -108,27 +117,33 @@ The generated report includes:
 - Learning Roadmap
 - Final Verdict
 
+---
+
+## Example
+
+```
+Analysis complete.
+Report saved to: resume_analysis_report.md
+
+ATS Score: 85%
+
+Final Verdict: Good
+```
+
+---
+
 ## Future Improvements
 
-- PDF Resume Upload
-- DOCX Resume Support
+- Upload Resume (PDF/DOCX)
+- Upload Job Description File
 - Streamlit Web Interface
-- Batch Resume Analysis
-- Keyword Highlighting
-- Resume Comparison
 - Export to PDF
-- Docker Support
+- Multi-language Support
+- Resume Comparison
+- Multiple ATS Templates
 
-## Contributing
-
-Contributions are welcome.
-
-1. Fork the repository.
-2. Create a feature branch.
-3. Commit your changes.
-4. Push the branch.
-5. Open a Pull Request.
+---
 
 ## License
 
-This project is intended for educational and learning purposes.
+This project is licensed under the MIT License.
