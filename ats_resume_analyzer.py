@@ -21,15 +21,16 @@ Usage:
     1. Set the GEMINI_API_KEY environment variable.
     2. Add your resume and job description.
     3. Run:
-       python ats_resume_analyzer.py
-"""
+    python ats_resume_analyzer.py
+    """
 
 import os
 from google import genai
 
-# ---------------------------------------------------------------------------
+
+
 # 1. CONFIGURE YOUR INPUTS HERE
-# ---------------------------------------------------------------------------
+
 
 # Option A: paste text directly
 RESUME_TEXT = """
@@ -51,9 +52,7 @@ PASTE THE FULL JOB DESCRIPTION TEXT HERE
 # with open("job_description.txt", "r", encoding="utf-8") as f:
 #     JOB_DESCRIPTION = f.read()
 
-# ---------------------------------------------------------------------------
-# 2. SYSTEM PROMPT — the analyzer persona and instructions
-# ---------------------------------------------------------------------------
+
 
 SYSTEM_PROMPT = """You are an expert ATS (Applicant Tracking System) Resume Analyzer and Career Coach.
 Your task is to analyze a candidate's resume against a provided job description and generate a
@@ -139,9 +138,10 @@ present in the resume. If any required information is missing, clearly state tha
 found rather than making assumptions.
 """
 
-# ---------------------------------------------------------------------------
+
+
 # 3. BUILD THE USER MESSAGE
-# ---------------------------------------------------------------------------
+
 
 def build_user_message(resume_text: str, job_description: str) -> str:
     return f"""Resume Text:
@@ -183,9 +183,8 @@ def analyze_resume(resume_text: str, job_description: str) -> str:
     return response.text
 
 
-# ---------------------------------------------------------------------------
+
 # 5. RUN AND SAVE OUTPUT
-# ---------------------------------------------------------------------------
 
 def main():
     if "PASTE THE FULL" in RESUME_TEXT or "PASTE THE FULL" in JOB_DESCRIPTION:
